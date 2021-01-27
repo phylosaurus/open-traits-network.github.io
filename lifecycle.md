@@ -190,6 +190,7 @@ This would be the minimal information for a trait record
   - geolocation
   - time and date
   - life stage (e.g. juvenile)
+  - sex
   - health status
   - scale (e.g. leaf)
   - context (e.g. natural habitat)
@@ -200,6 +201,7 @@ This would be the minimal information for a trait record
   - DOI/URI
   - unstructured citation information
   - content-based unique identifier
+  - link to associated media (e.g., images, sound recordings, etc)
 
 
 
@@ -232,7 +234,8 @@ After gathering the data from existing or new sources, they are usually transfor
 - Filtering
     - Non-native observations
     - Cultivated observations
-- Combining trait values (repeated measures, by higher taxonomic group)
+    - georeferencing errors (e.g., trees in the sea)
+- Combining trait values (repeated measures, by higher taxonomic group, by sex and/or life stage where applicable)
 - Maintaining references to credit data providers (including primary and intermediate databases (there might be multiple layers))
 
 ### Data management
@@ -313,7 +316,7 @@ Ideal tools for downstream analyses allow, likewise to the previous sections, re
         - Protein : Lipid 
         - Wing length : body length
         - Thorax mass : body mass 
-        - 
+        - root-shoot ratio
     - **Ordinations** can serve in cases where the effect of a magnitude of traits together can be important to predict a dependant variable. The variation of multi-variate trait space is reduced to few ordination coordinate axed which can be used for correlations as a proxy for agglomerated traits. 
 - Functional clusters
     - Given [hierarchical ontologies](#Controlled-vocabularies), traits can be clustered to higher level groups to facilitate exploration and serve as an overview. Keep in mind that a single trait can appear several times in different clusters, if the ontology allows such. Examples are:
@@ -340,12 +343,13 @@ Ideal tools for downstream analyses allow, likewise to the previous sections, re
 -  GWAS (genome wide association study): Genomes of genetic variants in different individuals can be compared to see if any variant is associated with a trait. This can be helpful to identify genes associated with e.g. climatic adaptations or specific behaviours. [Korte & Farlow 2013 Plant Methods](https://plantmethods.biomedcentral.com/articles/10.1186/1746-4811-9-29) 
 
 ## Handling uncertainty/variation
-
+- phylogenetic uncertainty: bootstrapping, sampling multiple topologies from a posterior distribution
+- modeling quantitative estimates of uncertainty/variation (e.g., Harwood and Stokes 2003, Petchey et al. 2015)(https://onlinelibrary.wiley.com/doi/full/10.1111/ele.12443 ; https://www.sciencedirect.com/science/article/pii/S0169534703002489?casa_token=sWVmtWeOc6gAAAAA:ORcN5cO3uvbDDvbND75Wvz6aUrUQsU282WFrZ5Ad52tmD7kFOlQeVSZwBQcAfgj56t4fXbw)
 
 # Publishing data and peer review
 
 Trait data can be published alongside traditional journal articles. It is common to add data as supplementary files or to upload them to dedicated data repositories and link to them. 
-Beside being supplementary to full research articles it is also possible to publish data sets as 'data publications' in specialized journals like [*Scientific Data*](https://www.nature.com/sdata/publish).
+Beside being supplementary to full research articles it is also possible to publish data sets as 'data publications' in specialized journals like [*Scientific Data*](https://www.nature.com/sdata/publish). Many general publications also accept data papers (e.g., Ecology).
 This publication channel allows for external review focused on the data itself rather than any conclusions drawn from it. This targeted review can further improve the quality and re-usability of the dataset.
 Also, increasingly, research papers/data are published via more informal channels like pre-print services like https://arxiv.org, data publication platform such as https://zenodo.org, https://figshare.com, or combination of the two, like [open science framework](https://osf.io). The nature of the research paper/data does not necessarily change depending on where it is published, but the perceived reputation and rigor of peer-review might be different.
 There are currently no common standards on the extent of peer review on supplementary data.
@@ -369,6 +373,7 @@ This is a list of people who contributed to this document. Feel free to add your
  - C .J. van der Kooi
  - Caterina Penone
  - Daniel Falster
+ - Daniel S. Park
  - Florian Schneider
  - Helge Bruelheide
  - Jen Hammock
